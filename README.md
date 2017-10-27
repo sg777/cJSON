@@ -1,4 +1,4 @@
-# cJSON
+# cJSON Parser
 
 Ultralightweight JSON parser in ANSI C.
 
