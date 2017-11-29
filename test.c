@@ -173,7 +173,10 @@ static void create_objects(void)
     cJSON_AddNumberToObject(fmt, "height", 1080);
     cJSON_AddFalseToObject (fmt, "interlace");
     cJSON_AddNumberToObject(fmt, "frame rate", 24);
-
+	char *rendered=cJSON_Print(root);
+	printf("\n%s",rendered);
+	
+	#if 0
     /* Print to text */
     if (print_preallocated(root) != 0) {
         cJSON_Delete(root);
@@ -253,6 +256,7 @@ static void create_objects(void)
         cJSON_Delete(root);
         exit(EXIT_FAILURE);
     }
+	#endif
     cJSON_Delete(root);
 }
 
